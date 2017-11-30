@@ -9,10 +9,38 @@
 	margin:0;
 }
 .slide_image{
-	top:80px;
+	top:0;
 	position: relative;
-	background-repeat:repeat-x;
 	height: 300px;
-	width: 100%;
+	width:100%;
+	margin-top: 88px;
+	background-position: center;
+	background-repeat: repeat-x;
+	background-size: cover;
 	display: block;
 }
+.column_title{
+	margin: 30px;
+	margin-left: 60px;
+	width:100%;
+}
+
+div.originalData_image>div.b{
+	margin-right: 60px;
+	margin-left: 60px; 
+	text-align: center;
+}
+
+div.processingData_image>div.b{
+	margin-top:5px;
+	text-align: center;
+}
+
+.dotted_line{
+	width: 100%;
+	height: 23px;
+	background-repeat: repeat-x;
+}
+
+
+
