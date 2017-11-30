@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = 'gb2312'>
+		<title>遥感数据展示系统</title>
+		
+		<link rel = "stylesheet" href = "https://openlayersbook.github.io/openlayers_book_samples/assets/ol3/css/ol.css" type = "text/css">
+		<link rel = "stylesheet" href = 'https://openlayersbook.github.io/openlayers_book_samples/assets/css/samples.css' type = "text/css">
+		<link rel = "stylesheet" href = "./files/css/showingModule.css" type = "text/css">
+	</head>
+	
+	<body>
+		<div class = "main">
+		<div class = "column1">
+			<img src = "./files/images/logo_01.png" class = "Img">
+		</div>
+		<div class = "column2">
+			<div class = "information">
+				<p> input your image information here and display it here.</p>
+			</div>
+			<div class = "map" id = "map">
+				<script src = 'https://openlayersbook.github.io/openlayers_book_samples/assets/ol3/js/ol.js'></script>
+				<script>
+					var osmLayer = new ol.layer.Tile({
+					source: new ol.source.OSM()
+					});
+					var BirmingHam = ol.proj.transform([-1.81185, 52.44314],'EPSG:4326','EPSG:3857');
+					var view = new ol.View({
+					center:BirmingHam,
+					zoom:6
+					});
+					var map = new ol.Map({
+					target:'map',
+					layers: [osmLayer],
+					view: view
+					});
+				</script>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
+
+
+
